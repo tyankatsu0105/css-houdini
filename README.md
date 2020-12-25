@@ -1,5 +1,14 @@
 How to create CSS Houdini
 
+## Dev
+
+```bash
+npm run website
+```
+http://localhost:8080/
+
+Edit `src`
+
 ## Memo
 
 - ピクセルパイプラインの Layout と Paint にフックしてるっぽい
