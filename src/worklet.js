@@ -2,8 +2,7 @@ const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-if (typeof registerPaint !== "undefined") {
-  class SuperUnderline {
+class PaintCtor {
     static get inputProperties() {
       return [
         "--extra-underlineNumber",
@@ -31,5 +30,6 @@ if (typeof registerPaint !== "undefined") {
     }
   }
 
-  registerPaint("extra-superUnderline", SuperUnderline);
+if (typeof registerPaint !== "undefined") {
+  registerPaint("extra-superUnderline", PaintCtor);
 }

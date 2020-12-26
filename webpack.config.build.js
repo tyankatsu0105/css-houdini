@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 /** @type import('webpack').Configuration & import('webpack-dev-server').Configuration  */
 module.exports = {
-  entry: './website/index.js',
-
-  devServer: {
-    contentBase: path.join(__dirname, 'website')
+  entry: './src/index.js',
+  output: {
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -16,15 +16,16 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: [
+              [
+                '@babel/preset-env', {
+                  "useBuiltIns": "usage"
+                }
+              ]
+            ]
           }
         }
       }
     ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'website', 'index.html')
-    })
-  ]
+  }
 };

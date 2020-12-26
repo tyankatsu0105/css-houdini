@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode=production",
+    "build": "webpack --config=webpack.config.build.js --mode=production",
     "website": "webpack serve"
   },
   "repository": {
@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/tyankatsu0105/tyankatsu-houdini#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "@types/webpack": "^4.41.25",
     "@types/webpack-dev-server": "^3.11.1",
+    "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^4.5.0",
     "raw-loader": "^4.0.2",
     "webpack": "^5.11.0",
