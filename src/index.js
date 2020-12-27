@@ -1,4 +1,3 @@
-import './properties.js';
 import worklet from 'raw-loader!./worklet.js';
 
 const workletBlob = URL.createObjectURL(

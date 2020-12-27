@@ -3,11 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 /** @type import('webpack').Configuration & import('webpack-dev-server').Configuration  */
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'index': path.resolve(__dirname, '/src/index.js'),
+    'properties' : path.resolve(__dirname, '/src/properties.js'),
+  },
   output: {
-    globalObject: "this",
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
