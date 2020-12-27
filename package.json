@@ -11,14 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/tyankatsu0105/css-houdini.git"
   },
-  "files": [
-    "dist"
-  ],
   "license": "MIT",
   "author": "tyankatsu <frips.ryilsufupe+dev@gmail.com> (https://tyankatsu.netlify.com/)",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "webpack --config=webpack.config.build.js --mode=production",
+    "release": "shipjs prepare",
     "website": "webpack serve"
   },
   "devDependencies": {
@@ -29,6 +30,7 @@
     "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^4.5.0",
     "raw-loader": "^4.0.2",
+    "shipjs": "0.23.0",
     "webpack": "^5.11.0",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
