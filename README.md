@@ -5,6 +5,35 @@
 npm install @tyankatsu0105/css-houdini
 ```
 
+```html
+<style>
+  @supports (background: paint(extra-superUnderline)) {
+    h1 {
+      --extra-underlineNumber: 10;
+      --extra-underlineColor: green;
+      --extra-underlineSpread: 20;
+      --extra-underlineWidth: 1;
+
+      background: paint(extra-superUnderline);
+      line-height: 1.5;
+    }
+  }
+</style>
+
+<body>
+  <h1>CSS Houdini</h1>
+
+  <script>
+    window.CSS.paintWorklet.addModule("https://unpkg.com/@tyankatsu0105/css-houdini/dist/worklet.js");
+  </script>
+
+  <!-- Option -->
+  <script src="https://unpkg.com/@tyankatsu0105/css-houdini/dist/properties.js"></script>
+
+</body>
+</html>
+```
+
 ## Dev
 
 ```bash
