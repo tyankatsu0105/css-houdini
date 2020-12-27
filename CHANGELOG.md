@@ -1,3 +1,7 @@
+## [0.0.8](https://github.com/tyankatsu0105/css-houdini/compare/v0.0.7...v0.0.8) (2020-12-27)
+
+
+
 ## [0.0.7](https://github.com/tyankatsu0105/css-houdini/compare/v0.0.6...v0.0.7) (2020-12-27)
 
 
