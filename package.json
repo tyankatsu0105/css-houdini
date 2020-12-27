@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "author": "tyankatsu <frips.ryilsufupe+dev@gmail.com> (https://tyankatsu.netlify.com/)",
-  "main": "dist/index.js",
+  "main": "dist/worklet.js",
   "files": [
     "dist"
   ],
@@ -23,11 +23,8 @@
     "website": "webpack serve"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
     "@types/webpack": "^4.41.25",
     "@types/webpack-dev-server": "^3.11.1",
-    "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^4.5.0",
     "raw-loader": "^4.0.2",
     "shipjs": "0.23.0",

@@ -1,3 +1,7 @@
-import superUnderline from "../src/index";
+import worklet from 'raw-loader!../src/worklet';
 
-window.CSS.paintWorklet.addModule(superUnderline);
+const workletBlob = URL.createObjectURL(
+  new Blob([worklet], { type: "application/javascript" })
+);
+
+window.CSS.paintWorklet.addModule(workletBlob);
