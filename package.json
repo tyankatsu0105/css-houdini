@@ -1,23 +1,26 @@
 {
   "name": "tyankatsu-houdini",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack --config=webpack.config.build.js --mode=production",
-    "website": "webpack serve"
+  "keywords": [],
+  "homepage": "https://github.com/tyankatsu0105/tyankatsu-houdini#readme",
+  "bugs": {
+    "url": "https://github.com/tyankatsu0105/tyankatsu-houdini/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tyankatsu0105/tyankatsu-houdini.git"
   },
-  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
   "author": "tyankatsu <frips.ryilsufupe+dev@gmail.com> (https://tyankatsu.netlify.com/)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tyankatsu0105/tyankatsu-houdini/issues"
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --config=webpack.config.build.js --mode=production",
+    "website": "webpack serve"
   },
-  "homepage": "https://github.com/tyankatsu0105/tyankatsu-houdini#readme",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",

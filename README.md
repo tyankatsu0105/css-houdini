@@ -28,3 +28,4 @@ Edit `src`
 - [CSS\.registerProperty\(\) \- Web API \| MDN](https://developer.mozilla.org/ja/docs/Web/API/CSS/RegisterProperty)
 - [Houdini – CSS の秘密を解き明かすもの  \|  Web  \|  Google Developers](https://developers.google.com/web/updates/2016/05/houdini?hl=ja)
 - [Exploring the CSS Paint API \| Bobrov Dev](https://bobrov.dev/blog/exploring-the-css-paint-api/)
+- [CSS Houdini: Properties, Values, and the Paint API \| Aysha Anggraini](https://aysha.me/2019/08/css-houdini-properties-values-and-the-paint-api/)
