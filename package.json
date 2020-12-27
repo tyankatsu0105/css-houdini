@@ -1,15 +1,15 @@
 {
-  "name": "tyankatsu-houdini",
+  "name": "@tyankatsu0105/css-houdini",
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/tyankatsu0105/tyankatsu-houdini#readme",
+  "homepage": "https://github.com/tyankatsu0105/css-houdini#readme",
   "bugs": {
-    "url": "https://github.com/tyankatsu0105/tyankatsu-houdini/issues"
+    "url": "https://github.com/tyankatsu0105/css-houdini/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tyankatsu0105/tyankatsu-houdini.git"
+    "url": "git+https://github.com/tyankatsu0105/css-houdini.git"
   },
   "files": [
     "dist"
