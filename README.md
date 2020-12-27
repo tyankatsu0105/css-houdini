@@ -1,4 +1,9 @@
-How to create CSS Houdini
+# CSS Houdini
+
+## Usage
+```bash
+npm install @tyankatsu0105/css-houdini
+```
 
 ## Dev
 
