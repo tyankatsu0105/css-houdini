@@ -1,7 +1,7 @@
 /**
  * @typedef PropertyDefinition 
  * @property {string} name
- * @property {string=} syntax
+ * @property {`<${keyof import('mdn-data/css/types.json')}>`} syntax
  * @property {boolean} inherits
  * @property {any=} initialValue
  */

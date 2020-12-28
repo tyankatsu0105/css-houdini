@@ -27,6 +27,7 @@
     "@types/webpack": "^4.41.25",
     "@types/webpack-dev-server": "^3.11.1",
     "html-webpack-plugin": "^4.5.0",
+    "mdn-data": "^2.0.14",
     "raw-loader": "^4.0.2",
     "shipjs": "0.23.0",
     "webpack": "^5.11.0",
