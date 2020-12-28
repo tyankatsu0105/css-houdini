@@ -7,6 +7,23 @@
 </head>
 
 <style>
+  .container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button{
+    padding: 12px 16px;
+    border: 2px solid rgb(2, 206, 80);
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  .button--ripple{}
   @supports (background: paint(extra-superUnderline)) {
     h1 {
       --extra-underlineNumber: 10;
@@ -21,6 +38,12 @@
 </style>
 
 <body>
-  <h1>Hello</h1>
+  <h1>aaaaaaaaaa</h1>
+  <div class="container">
+    <button type="button" class="button button--ripple">
+      Button
+    </button>
+  </div>
+  
 </body>
 </html>

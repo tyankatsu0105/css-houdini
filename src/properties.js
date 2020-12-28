@@ -1,25 +1,27 @@
-CSS.registerProperty({
+import { registerProperty } from "./utils";
+
+registerProperty({
   name: '--extra-underlineNumber',
   syntax: '<number>',
   inherits: false,
   initialValue: 3
 });
 
-CSS.registerProperty({
+registerProperty({
   name: '--extra-underlineColor',
   syntax: '<color>',
   inherits: true,
   initialValue: 'black'
 });
 
-CSS.registerProperty({
+registerProperty({
   name: '--extra-underlineSpread',
   syntax: '<number>',
   inherits: false,
   initialValue: 20
 });
 
-CSS.registerProperty({
+registerProperty({
   name: '--extra-underlineWidth',
   syntax: '<number>',
   inherits: false,

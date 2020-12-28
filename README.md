@@ -53,6 +53,10 @@ Edit `src`
   - registerPaintの第一引数の名称
   - registerPropertyで登録したCSS変数の名称
 
+### CSS.registerProperty
+- https://developer.mozilla.org/ja/docs/Web/API/CSS/RegisterProperty
+- https://csstree.github.io/docs/syntax/
+
 ## Links
 
 - [\(6\) Extending CSS with Houdini \- YouTube](https://www.youtube.com/watch?v=5eBar5TI71M)
