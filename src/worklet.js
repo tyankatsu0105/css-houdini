@@ -22,6 +22,7 @@ if (typeof registerPaint !== "undefined") {
           "--houdini-ripple-y",
           "--houdini-ripple-color",
           "--houdini-ripple-tick",
+          "--houdini-ripple-tick-max",
           "--houdini-ripple-speed"
         ];
       }
@@ -37,17 +38,17 @@ if (typeof registerPaint !== "undefined") {
         const houdiniRippleY = parseFloat(properties.get('--houdini-ripple-y').toString());
         const houdiniRippleColor = properties.get('--houdini-ripple-color').toString();
         const houdiniRippleSpeed = parseFloat(properties.get('--houdini-ripple-speed').toString());
+        const houdiniRippleTickMax = parseFloat(properties.get('--houdini-ripple-tick-max').toString());
         
-        const maxTick = 1000;
         let houdiniRippleTick = houdiniRippleSpeed * parseFloat(properties.get('--houdini-ripple-tick').toString());
         if (houdiniRippleTick < 0) {
           houdiniRippleTick = 0;
         }
-        if (maxTick < houdiniRippleTick) {
-          houdiniRippleTick = maxTick;
+        if (houdiniRippleTickMax < houdiniRippleTick) {
+          houdiniRippleTick = houdiniRippleTickMax;
         }
 
-        const tickProgress = houdiniRippleTick / maxTick;
+        const tickProgress = houdiniRippleTick / houdiniRippleTickMax;
 
         ctx.beginPath()
 

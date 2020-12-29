@@ -27,6 +27,7 @@
     --houdini-ripple-y: 0;
     --houdini-ripple-color: rgb(218, 218, 218);
     --houdini-ripple-tick: 0;
+    --houdini-ripple-tick-max: 1000;
     --houdini-ripple-speed: 4.0;
   }
   @supports(background: paint(ripple)) {
@@ -51,6 +52,7 @@
       const [x, y] = [event.offsetX, event.offsetY];
       button.style.setProperty('--houdini-ripple-x', x)
       button.style.setProperty('--houdini-ripple-y', y)
+      const maxTick = getComputedStyle(button).getPropertyValue('--houdini-ripple-tick-max')
 
       start = performance.now();
 
@@ -58,7 +60,7 @@
         const count = Math.floor(now - start);
         button.style.setProperty('--houdini-ripple-tick', count)
 
-        if(1000 < count) {
+        if(maxTick < count) {
           button.style.setProperty('--houdini-ripple-tick', 0)
           return;
         }

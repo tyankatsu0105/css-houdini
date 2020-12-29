@@ -31,6 +31,13 @@ registerProperty({
 });
 
 registerProperty({
+  name: '--houdini-ripple-tick-max',
+  syntax: '<number>',
+  inherits: false,
+  initialValue: 1000
+});
+
+registerProperty({
   name: '--houdini-ripple-speed',
   syntax: '<time>',
   inherits: false,
