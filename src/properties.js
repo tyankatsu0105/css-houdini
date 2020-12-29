@@ -41,5 +41,5 @@ registerProperty({
   name: '--houdini-ripple-speed',
   syntax: '<time>',
   inherits: false,
-  initialValue: 1s
+  initialValue: '1s'
 });
