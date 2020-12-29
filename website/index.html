@@ -22,28 +22,54 @@
     text-align: center;
     cursor: pointer;
     font-size: 2rem;
-  }
-  .button--ripple{}
-  @supports (background: paint(extra-superUnderline)) {
-    h1 {
-      --extra-underlineNumber: 10;
-      --extra-underlineColor: green;
-      --extra-underlineSpread: 20;
-      --extra-underlineWidth: 1;
 
-      background: paint(extra-superUnderline);
-      line-height: 1.5;
+    --houdini-ripple-x: 0;
+    --houdini-ripple-y: 0;
+    --houdini-ripple-color: rgb(218, 218, 218);
+    --houdini-ripple-tick: 0;
+    --houdini-ripple-speed: 4.0;
+  }
+  @supports(background: paint(ripple)) {
+    .button--ripple{
+      background-image: paint(ripple);
     }
   }
 </style>
 
 <body>
-  <h1>aaaaaaaaaa</h1>
   <div class="container">
-    <button type="button" class="button button--ripple">
+    <button type="button" id="ripple-button" class="button button--ripple">
       Button
     </button>
   </div>
+
+  <script>
+    const button = document.getElementById('ripple-button')
+    let start;
+
+    const handleClickButton = (event) => {
+      const [x, y] = [event.offsetX, event.offsetY];
+      button.style.setProperty('--houdini-ripple-x', x)
+      button.style.setProperty('--houdini-ripple-y', y)
+
+      start = performance.now();
+
+      const ripple = (now) => {
+        const count = Math.floor(now - start);
+        button.style.setProperty('--houdini-ripple-tick', count)
+
+        if(1000 < count) {
+          button.style.setProperty('--houdini-ripple-tick', 0)
+          return;
+        }
+
+        requestAnimationFrame(ripple);
+      }
+      requestAnimationFrame(ripple);
+    }
+
+    button.onclick = handleClickButton
+  </script>
   
 </body>
 </html>

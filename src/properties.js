@@ -1,29 +1,38 @@
 import { registerProperty } from "./utils";
 
 registerProperty({
-  name: '--extra-underlineNumber',
+  name: '--houdini-ripple-x',
   syntax: '<number>',
   inherits: false,
-  initialValue: 3
+  initialValue: 0
 });
 
 registerProperty({
-  name: '--extra-underlineColor',
+  name: '--houdini-ripple-y',
+  syntax: '<number>',
+  inherits: false,
+  initialValue: 0
+});
+
+
+registerProperty({
+  name: '--houdini-ripple-color',
   syntax: '<color>',
-  inherits: true,
-  initialValue: 'black'
+  inherits: false,
+  initialValue: "red"
+});
+
+
+registerProperty({
+  name: '--houdini-ripple-tick',
+  syntax: '<number>',
+  inherits: false,
+  initialValue: 0
 });
 
 registerProperty({
-  name: '--extra-underlineSpread',
-  syntax: '<number>',
+  name: '--houdini-ripple-speed',
+  syntax: '<time>',
   inherits: false,
-  initialValue: 20
-});
-
-registerProperty({
-  name: '--extra-underlineWidth',
-  syntax: '<number>',
-  inherits: false,
-  initialValue: 2
+  initialValue: 1s
 });
