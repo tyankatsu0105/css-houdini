@@ -5,5 +5,5 @@ module.exports = {
     packagesToPublish: ['packages/*'],
     updateDependencies: false
   },
-  buildCommand: () => 'npm run build:all';
+  buildCommand: () => 'npm run build:all'
 };
