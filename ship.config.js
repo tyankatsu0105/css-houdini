@@ -11,7 +11,7 @@ const getPackagePath = (dir) => {
 };
 
 const getDistPackagePath = (packagePath) => {
-  const distPackagePath = `../../dist/${packagePath}`;
+  const distPackagePath = `dist/${packagePath}`;
 
   return { distPackagePath };
 };
