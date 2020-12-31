@@ -1,3 +1,6 @@
+const shell = require('shelljs');
+
+
 const getPackagePath = (dir) => {
   const splittedDir = dir.split('/');
   const packagePath = [
@@ -21,12 +24,11 @@ module.exports = {
     updateDependencies: false,
   },
   buildCommand: () => 'npm run build:all',
-  beforePublish: ({ exec, dir }) => {
+  beforePublish: ({ dir }) => {
     const { packagePath } = getPackagePath(dir);
     const { distPackagePath } = getDistPackagePath(packagePath);
 
-    exec(`rm -rf ./*`);
-    exec(`cp ${distPackagePath} .`);
+    shell.cd(distPackagePath);
   },
   publishCommand: ({ defaultCommand, tag }) =>
     `${defaultCommand} --access public --tag ${tag}`,
