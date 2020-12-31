@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+# CSS Houdini Ripple
 
+## Usage
+```bash
+npm install @tyankatsu0105/css-houdini-ripple
+```
+
+```html
 <style>
   .container{
     width: 100vw;
@@ -27,7 +27,6 @@
     --houdini-ripple-y: 0;
     --houdini-ripple-color: rgb(218, 218, 218);
     --houdini-ripple-tick: 0;
-    --houdini-ripple-tick-max: 1000;
     --houdini-ripple-speed: 4.0;
   }
   @supports(background: paint(ripple)) {
@@ -52,7 +51,6 @@
       const [x, y] = [event.offsetX, event.offsetY];
       button.style.setProperty('--houdini-ripple-x', x)
       button.style.setProperty('--houdini-ripple-y', y)
-      const maxTick = getComputedStyle(button).getPropertyValue('--houdini-ripple-tick-max')
 
       start = performance.now();
 
@@ -60,7 +58,7 @@
         const count = Math.floor(now - start);
         button.style.setProperty('--houdini-ripple-tick', count)
 
-        if(maxTick < count) {
+        if(1000 < count) {
           button.style.setProperty('--houdini-ripple-tick', 0)
           return;
         }
@@ -72,6 +70,17 @@
 
     button.onclick = handleClickButton
   </script>
-  
+
+  <script>
+    window.CSS.paintWorklet.addModule("https://unpkg.com/@tyankatsu0105/css-houdini-ripple/dist/worklet.js");
+  </script>
+
+  <!-- Option -->
+  <script src="https://unpkg.com/@tyankatsu0105/css-houdini-ripple/dist/properties.js"></script>
+
 </body>
 </html>
+```
+
+## LICENSE
+MIT

@@ -1,95 +1,39 @@
 # CSS Houdini
 
 ## Usage
+Check each project's README.md.
+
+## Development
+
+### Setup
+If you develops at first, Run this:
+
 ```bash
-npm install @tyankatsu0105/css-houdini
+sh tools/scripts/setup
 ```
 
-```html
-<style>
-  .container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .button{
-    padding: 12px 16px;
-    border: 2px solid rgb(2, 206, 80);
-    background-color: #fff;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 2rem;
-
-    --houdini-ripple-x: 0;
-    --houdini-ripple-y: 0;
-    --houdini-ripple-color: rgb(218, 218, 218);
-    --houdini-ripple-tick: 0;
-    --houdini-ripple-speed: 4.0;
-  }
-  @supports(background: paint(ripple)) {
-    .button--ripple{
-      background-image: paint(ripple);
-    }
-  }
-</style>
-
-<body>
-  <div class="container">
-    <button type="button" id="ripple-button" class="button button--ripple">
-      Button
-    </button>
-  </div>
-
-  <script>
-    const button = document.getElementById('ripple-button')
-    let start;
-
-    const handleClickButton = (event) => {
-      const [x, y] = [event.offsetX, event.offsetY];
-      button.style.setProperty('--houdini-ripple-x', x)
-      button.style.setProperty('--houdini-ripple-y', y)
-
-      start = performance.now();
-
-      const ripple = (now) => {
-        const count = Math.floor(now - start);
-        button.style.setProperty('--houdini-ripple-tick', count)
-
-        if(1000 < count) {
-          button.style.setProperty('--houdini-ripple-tick', 0)
-          return;
-        }
-
-        requestAnimationFrame(ripple);
-      }
-      requestAnimationFrame(ripple);
-    }
-
-    button.onclick = handleClickButton
-  </script>
-
-  <script>
-    window.CSS.paintWorklet.addModule("https://unpkg.com/@tyankatsu0105/css-houdini/dist/worklet.js");
-  </script>
-
-  <!-- Option -->
-  <script src="https://unpkg.com/@tyankatsu0105/css-houdini/dist/properties.js"></script>
-
-</body>
-</html>
-```
-
-## Dev
+### Website
 
 ```bash
 npm run website
 ```
-http://localhost:8080/
+start website site with webpack-sev-server
 
-Edit `src`
+### Create Package
+
+```bash
+npx nx g @nrwl/node:library <packageName> --publishable --importPath="@tyankatsu0105/<packageName>"
+```
+
+## Build
+
+```bash
+npm run build css-houdini-ripple
+```
+
+```bash
+npm run build:all
+```
 
 ## Memo
 - CSS Houdiniとは、ピクセルパイプラインの各ステップにhookしてCSSの拡張を可能にするAPI郡のこと
@@ -115,6 +59,3 @@ Edit `src`
 - [Houdini – CSS の秘密を解き明かすもの  \|  Web  \|  Google Developers](https://developers.google.com/web/updates/2016/05/houdini?hl=ja)
 - [Exploring the CSS Paint API \| Bobrov Dev](https://bobrov.dev/blog/exploring-the-css-paint-api/)
 - [CSS Houdini: Properties, Values, and the Paint API \| Aysha Anggraini](https://aysha.me/2019/08/css-houdini-properties-values-and-the-paint-api/)
-
-## LICENSE
-MIT

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "=========================="
+echo "npm install at project root"
+echo "=========================="
+npm install
+
+echo "=========================="
+echo "move to website and npm install"
+echo "=========================="
+cd website
+npm install
+
+echo "=========================="
+echo "move to project root"
+echo "=========================="
+cd ../
+
+echo "✨complete all task"
