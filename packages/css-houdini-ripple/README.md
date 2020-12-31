@@ -1,7 +1,86 @@
-# css-houdini-ripple
+# CSS Houdini Ripple
 
-This library was generated with [Nx](https://nx.dev).
+## Usage
+```bash
+npm install @tyankatsu0105/css-houdini-ripple
+```
 
-## Running unit tests
+```html
+<style>
+  .container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button{
+    padding: 12px 16px;
+    border: 2px solid rgb(2, 206, 80);
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2rem;
 
-Run `nx test css-houdini-ripple` to execute the unit tests via [Jest](https://jestjs.io).
+    --houdini-ripple-x: 0;
+    --houdini-ripple-y: 0;
+    --houdini-ripple-color: rgb(218, 218, 218);
+    --houdini-ripple-tick: 0;
+    --houdini-ripple-speed: 4.0;
+  }
+  @supports(background: paint(ripple)) {
+    .button--ripple{
+      background-image: paint(ripple);
+    }
+  }
+</style>
+
+<body>
+  <div class="container">
+    <button type="button" id="ripple-button" class="button button--ripple">
+      Button
+    </button>
+  </div>
+
+  <script>
+    const button = document.getElementById('ripple-button')
+    let start;
+
+    const handleClickButton = (event) => {
+      const [x, y] = [event.offsetX, event.offsetY];
+      button.style.setProperty('--houdini-ripple-x', x)
+      button.style.setProperty('--houdini-ripple-y', y)
+
+      start = performance.now();
+
+      const ripple = (now) => {
+        const count = Math.floor(now - start);
+        button.style.setProperty('--houdini-ripple-tick', count)
+
+        if(1000 < count) {
+          button.style.setProperty('--houdini-ripple-tick', 0)
+          return;
+        }
+
+        requestAnimationFrame(ripple);
+      }
+      requestAnimationFrame(ripple);
+    }
+
+    button.onclick = handleClickButton
+  </script>
+
+  <script>
+    window.CSS.paintWorklet.addModule("https://unpkg.com/@tyankatsu0105/css-houdini-ripple/dist/worklet.js");
+  </script>
+
+  <!-- Option -->
+  <script src="https://unpkg.com/@tyankatsu0105/css-houdini-ripple/dist/properties.js"></script>
+
+</body>
+</html>
+```
+
+## LICENSE
+MIT
