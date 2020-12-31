@@ -31,7 +31,7 @@
           ],
           "options": {
             "srcRootForCompilationRoot": "packages/css-houdini-ripple/src",
-            "outputPath": "packages/css-houdini-ripple/dist",
+            "outputPath": "dist/packages/css-houdini-ripple",
             "tsConfig": "packages/css-houdini-ripple/tsconfig.lib.json",
             "packageJson": "packages/css-houdini-ripple/package.json",
             "main": "packages/css-houdini-ripple/worklet.ts",
