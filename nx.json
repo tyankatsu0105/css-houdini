@@ -22,7 +22,11 @@
       }
     }
   },
-  "projects": {},
+  "projects": {
+    "css-houdini-ripple": {
+      "tags": []
+    }
+  },
   "workspaceLayout": {
     "libsDir": "packages"
   }
