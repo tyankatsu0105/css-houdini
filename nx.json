@@ -1,7 +1,7 @@
 {
-  "npmScope": "css-houdini",
+  "npmScope": "tyankatsu0105",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "workspace.json": "*",
