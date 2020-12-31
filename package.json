@@ -26,7 +26,8 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "website": "cd website && npm run serve",
-    "build:website": "cd website && npm run build"
+    "build:website": "cd website && npm run build",
+    "release": "shipjs prepare"
   },
   "private": true,
   "dependencies": {},
@@ -52,6 +53,7 @@
     "eslint-plugin-typescript-sort-keys": "1.5.0",
     "jest": "26.2.2",
     "prettier": "2.1.2",
+    "shipjs": "0.23.0",
     "ts-jest": "26.4.0",
     "ts-node": "~9.1.1",
     "tslint": "~6.1.0",
