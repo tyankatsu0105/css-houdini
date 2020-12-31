@@ -24,12 +24,12 @@ module.exports = {
     updateDependencies: false,
   },
   buildCommand: () => 'npm run build:all',
-  beforePublish: ({ dir }) => {
+  publishCommand: ({ defaultCommand, tag, dir }) => {
     const { packagePath } = getPackagePath(dir);
     const { distPackagePath } = getDistPackagePath(packagePath);
 
     shell.cd(distPackagePath);
-  },
-  publishCommand: ({ defaultCommand, tag }) =>
-    `${defaultCommand} --access public --tag ${tag}`,
+
+    return `${defaultCommand} --access public --tag ${tag}`
+  }
 };
