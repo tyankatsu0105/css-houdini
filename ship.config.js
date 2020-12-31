@@ -10,8 +10,7 @@ module.exports = {
   buildCommand: () => 'npm run build:all',
   publishCommand: ({ defaultCommand, tag }) => {
     shell.exec('ls -a');
-    shell.cd('./dist');
-    shell.exec('pwa');
+    shell.cd('dist/packages/css-houdini-ripple');
 
     return `${defaultCommand} --access public --tag ${tag}`
   }
