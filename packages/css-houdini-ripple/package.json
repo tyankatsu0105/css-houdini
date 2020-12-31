@@ -1,4 +1,7 @@
 {
   "name": "@tyankatsu0105/css-houdini-ripple",
-  "version": "0.1.1"
+  "version": "0.1.1",
+  "files": [
+    "dist"
+  ]
 }
