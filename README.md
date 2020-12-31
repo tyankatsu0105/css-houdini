@@ -5,6 +5,13 @@ Check each project's README.md.
 
 ## Development
 
+### Setup
+If you develops at first, Run this:
+
+```bash
+sh tools/scripts/setup
+```
+
 ### Website
 
 ```bash
@@ -16,6 +23,16 @@ start website site with webpack-sev-server
 
 ```bash
 npx nx g @nrwl/node:library <packageName> --publishable --importPath="@tyankatsu0105/<packageName>"
+```
+
+## Build
+
+```bash
+npm run build css-houdini-ripple
+```
+
+```bash
+npm run build:all
 ```
 
 ## Memo
