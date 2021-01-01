@@ -2,4 +2,10 @@ import * as React from 'react';
 
 import * as Presenter from './presenter';
 
-export const Component = () => <Presenter.Component />;
+type Props = {
+  heading: string;
+};
+
+export const Component: React.VFC<Props> = (props) => (
+  <Presenter.Component {...props} />
+);
