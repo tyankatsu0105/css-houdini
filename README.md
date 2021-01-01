@@ -1,11 +1,13 @@
 # CSS Houdini
 
 ## Usage
+
 Check each project's README.md.
 
 ## Development
 
 ### Setup
+
 If you develops at first, Run this:
 
 ```bash
@@ -17,6 +19,7 @@ sh tools/scripts/setup
 ```bash
 npm run website
 ```
+
 start website site with webpack-sev-server
 
 ### Create Package
@@ -25,27 +28,45 @@ start website site with webpack-sev-server
 npx nx g @nrwl/node:library <packageName> --publishable --importPath="@tyankatsu0105/<packageName>"
 ```
 
+### Commit
+
+```bash
+npm run commit
+```
+
 ## Build
+
+### Packages
 
 ```bash
 npm run build css-houdini-ripple
 ```
 
+or
+
 ```bash
 npm run build:all
 ```
 
+### Website
+
+```bash
+npm run build:website
+```
+
 ## Memo
-- CSS Houdiniとは、ピクセルパイプラインの各ステップにhookしてCSSの拡張を可能にするAPI郡のこと
-  - CSSOMにアクセスできるAPIは、どれもレンダリングが終わったあとの操作
-  - しかし、Houdiniでレンダリングまで待たずに各プロセスにフックとして機能を登録して、CSSの拡張ができる
+
+- CSS Houdini とは、ピクセルパイプラインの各ステップに hook して CSS の拡張を可能にする API 郡のこと
+  - CSSOM にアクセスできる API は、どれもレンダリングが終わったあとの操作
+  - しかし、Houdini でレンダリングまで待たずに各プロセスにフックとして機能を登録して、CSS の拡張ができる
 - PaintWorklet.registerPaint()で処理を書いた class を登録して、CSS.PaintWorklet.addModule()で PaintWorklet に登録した class を追加して使えるようにするっぽい
-  - registerPaintに渡す引数は、`(name, paintCtrl)`らしい https://drafts.css-houdini.org/css-paint-api-1/
-- paintWorklet.addModuleでnameの指定ができないので、インストールしたモジュール間で命名のバッティングが起こりそう
-  - registerPaintの第一引数の名称
-  - registerPropertyで登録したCSS変数の名称
+  - registerPaint に渡す引数は、`(name, paintCtrl)`らしい https://drafts.css-houdini.org/css-paint-api-1/
+- paintWorklet.addModule で name の指定ができないので、インストールしたモジュール間で命名のバッティングが起こりそう
+  - registerPaint の第一引数の名称
+  - registerProperty で登録した CSS 変数の名称
 
 ### CSS.registerProperty
+
 - https://developer.mozilla.org/ja/docs/Web/API/CSS/RegisterProperty
 - https://csstree.github.io/docs/syntax/
 
