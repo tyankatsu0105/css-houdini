@@ -26,7 +26,7 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "website": "cd website && npm run serve",
-    "build:website": "cd website && npm run build",
+    "build:website": "npm run build:all && cd website && npm run build",
     "release": "shipjs prepare"
   },
   "private": true,
