@@ -19,7 +19,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "~ui/*": ["src/ui/*"]
+      "~ui/*": ["src/ui/*"],
+      "~shared": ["src/shared/index.ts"]
     },
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
@@ -29,4 +30,3 @@
   "exclude": ["node_modules", "tmp"],
   "include": ["src"]
 }
-
