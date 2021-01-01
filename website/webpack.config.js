@@ -5,6 +5,8 @@ const JsConfigWebpackPlugin = require('js-config-webpack-plugin');
 const ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');
 const TsConfigWebpackPlugin = require('ts-config-webpack-plugin');
 
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
 module.exports = {
   plugins: [
     // Generate a base html file and injects all generated css and js files
@@ -21,4 +23,7 @@ module.exports = {
     // see https://github.com/namics/webpack-config-plugins/tree/master/packages/ts-config-webpack-plugin/config
     new TsConfigWebpackPlugin(),
   ],
+  resolve: {
+    plugins: [new TsconfigPathsPlugin()],
+  },
 };
