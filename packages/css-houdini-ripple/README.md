@@ -76,11 +76,11 @@ npm install @tyankatsu0105/css-houdini-ripple
   </script>
 
   <script>
-    window.CSS.paintWorklet.addModule("https://unpkg.com/@tyankatsu0105/css-houdini-ripple/dist/worklet.js");
+    window.CSS.paintWorklet.addModule("https://unpkg.com/@tyankatsu0105/css-houdini-ripple/worklet.js");
   </script>
 
   <!-- Option -->
-  <script src="https://unpkg.com/@tyankatsu0105/css-houdini-ripple/dist/properties.js"></script>
+  <script src="https://unpkg.com/@tyankatsu0105/css-houdini-ripple/properties.js"></script>
 
 </body>
 </html>
