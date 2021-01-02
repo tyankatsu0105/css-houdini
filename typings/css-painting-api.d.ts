@@ -11,8 +11,15 @@ type PaintSize = {
   readonly height: number;
   readonly width: number;
 };
+
+/**
+ * see: https://drafts.css-houdini.org/css-typed-om-1/#the-stylepropertymap
+ */
 type StylePropertyMap = {
-  [key: string]: any;
+  get(property: string): any
+  getAll(property: string): ReturnType<StylePropertyMap['get']>[]
+  has(property: string): boolean
+  size: number
 };
 
 type PaintCtorInputProperties = string[]

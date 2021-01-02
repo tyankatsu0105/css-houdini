@@ -1,41 +1,20 @@
 CSS.registerProperty({
   inherits: false,
   initialValue: 0,
-  name: '--houdini-ripple-x',
-  syntax: '<number>',
-});
-
-CSS.registerProperty({
-  inherits: false,
-  initialValue: 0,
-  name: '--houdini-ripple-y',
+  name: '--houdini-stripe-line-number',
   syntax: '<number>',
 });
 
 CSS.registerProperty({
   inherits: false,
   initialValue: 'red',
-  name: '--houdini-ripple-color',
+  name: '--houdini-stripe-line-color',
   syntax: '<color>',
 });
 
 CSS.registerProperty({
   inherits: false,
   initialValue: 0,
-  name: '--houdini-ripple-tick',
+  name: '--houdini-stripe-line-max-width',
   syntax: '<number>',
-});
-
-CSS.registerProperty({
-  inherits: false,
-  initialValue: 1000,
-  name: '--houdini-ripple-tick-max',
-  syntax: '<number>',
-});
-
-CSS.registerProperty({
-  inherits: false,
-  initialValue: '1s',
-  name: '--houdini-ripple-speed',
-  syntax: '<time>',
 });

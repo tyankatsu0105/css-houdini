@@ -20,7 +20,8 @@
     "baseUrl": ".",
     "paths": {
       "~ui/*": ["src/ui/*"],
-      "~shared": ["src/shared/index.ts"]
+      "~shared": ["src/shared/index.ts"],
+      "~static/*": ["src/static/*"]
     },
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,

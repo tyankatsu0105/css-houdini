@@ -28,6 +28,14 @@ start website site with webpack-sev-server
 npx nx g @nrwl/node:library <packageName> --publishable --importPath="@tyankatsu0105/<packageName>" --rootDir="packages/<packageName>/src"
 ```
 
+### Build Watch
+
+```bash
+npx nx run <packageName>:build --watch
+
+# ex) npx nx run css-houdini-glitch:build --watch
+```
+
 ### Commit
 
 ```bash
