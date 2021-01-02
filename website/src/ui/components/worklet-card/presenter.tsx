@@ -2,30 +2,28 @@ import { Box, Card, CardContent, Link, Typography } from '@material-ui/core';
 import * as React from 'react';
 import styled from 'styled-components';
 
-import * as Hooks from './hooks';
-
-type Props = {
-  heading: string;
+export type WorkletItem = {
+  component: () => JSX.Element;
+  name: string;
 };
 
+type Props = WorkletItem;
+
+const createLink = (name: Props['name']) =>
+  `https://github.com/tyankatsu0105/css-houdini/tree/main/packages/${name}`;
+
 export const Component: React.VFC<Props> = (props) => {
-  const { Component: RippleComponent } = Hooks.useCSSHoudiniRipple();
   return (
     <Card>
       <CardContent>
         <Heading>
-          <Link
-            href={`https://github.com/tyankatsu0105/css-houdini/tree/main/packages/${props.heading}`}
-            target="_blank"
-          >
-            {props.heading}
+          <Link href={createLink(props.name)} target="_blank">
+            {props.name}
           </Link>
         </Heading>
         <Box marginTop={2}>
           <StyledCard>
-            <CardContent>
-              <RippleComponent />
-            </CardContent>
+            <props.component />
           </StyledCard>
         </Box>
       </CardContent>
@@ -41,4 +39,5 @@ const Heading = styled((props) => (
 
 const StyledCard = styled(Card)`
   background-color: ${(props) => props.theme.palette.common.white};
+  height: 200px;
 `;

@@ -1,7 +1,9 @@
-import worklet from 'raw-loader!../../../../../../../dist/packages/css-houdini-ripple/worklet';
+import worklet from 'raw-loader!../../../../../../dist/packages/css-houdini-ripple/worklet';
 import * as React from 'react';
 
 import styles from './style.module.scss';
+
+const name = 'css-houdini-ripple' as const;
 
 export const useCSSHoudiniRipple = () => {
   React.useEffect(() => {
@@ -41,15 +43,17 @@ export const useCSSHoudiniRipple = () => {
   );
 
   const Component = () => (
-    <button
-      onClick={handleClick}
-      type="button"
-      id="ripple-button"
-      className={`${styles['button']} ${styles['button--ripple']}`}
-    >
-      Button
-    </button>
+    <div className={`${styles['wrap']}`}>
+      <button
+        onClick={handleClick}
+        type="button"
+        id="ripple-button"
+        className={`${styles['button']} ${styles['button--ripple']}`}
+      >
+        Button
+      </button>
+    </div>
   );
 
-  return { Component };
+  return { Component, name };
 };

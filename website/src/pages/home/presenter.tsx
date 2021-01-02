@@ -1,16 +1,28 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
+import * as Components from '~ui/components';
 import * as Templates from '~ui/templates';
 
-const Component = () => (
-  <>
-    <Helmet>
-      <title>TOP</title>
-    </Helmet>
+import * as Hooks from './hooks';
 
-    <Templates.Home.Component />
-  </>
-);
+const Component = () => {
+  const workletItems: Components.WorkletCard.WorkletItem[] = [
+    {
+      component: Hooks.useCSSHoudiniRipple().Component,
+      name: Hooks.useCSSHoudiniRipple().name,
+    },
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>TOP</title>
+      </Helmet>
+
+      <Templates.Home.Component workletItems={workletItems} />
+    </>
+  );
+};
 
 export default Component;
