@@ -41,6 +41,47 @@
           }
         }
       }
+    },
+    "css-houdini-glitch": {
+      "root": "packages/css-houdini-glitch",
+      "sourceRoot": "packages/css-houdini-glitch/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "packages/css-houdini-glitch/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/packages/css-houdini-glitch"
+          ],
+          "options": {
+            "jestConfig": "packages/css-houdini-glitch/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/packages/css-houdini-glitch",
+            "tsConfig": "packages/css-houdini-glitch/tsconfig.lib.json",
+            "packageJson": "packages/css-houdini-glitch/package.json",
+            "main": "packages/css-houdini-glitch/src/index.ts",
+            "assets": [
+              "packages/css-houdini-glitch/*.md"
+            ],
+            "srcRootForCompilationRoot": "packages/css-houdini-glitch/src"
+          }
+        }
+      }
     }
   },
   "cli": {
