@@ -9,16 +9,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "packages/css-houdini-ripple/**/*.ts"
-            ]
+            "lintFilePatterns": ["packages/css-houdini-ripple/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/packages/css-houdini-ripple"
-          ],
+          "outputs": ["coverage/packages/css-houdini-ripple"],
           "options": {
             "jestConfig": "packages/css-houdini-ripple/jest.config.js",
             "passWithNoTests": true
@@ -26,18 +22,47 @@
         },
         "build": {
           "executor": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "srcRootForCompilationRoot": "packages/css-houdini-ripple/src",
             "outputPath": "dist/packages/css-houdini-ripple",
             "tsConfig": "packages/css-houdini-ripple/tsconfig.lib.json",
             "packageJson": "packages/css-houdini-ripple/package.json",
             "main": "packages/css-houdini-ripple/worklet.ts",
-            "assets": [
-              "packages/css-houdini-ripple/*.md"
-            ]
+            "assets": ["packages/css-houdini-ripple/*.md"]
+          }
+        }
+      }
+    },
+    "css-houdini-stripe": {
+      "root": "packages/css-houdini-stripe",
+      "sourceRoot": "packages/css-houdini-stripe/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["packages/css-houdini-stripe/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/packages/css-houdini-stripe"],
+          "options": {
+            "jestConfig": "packages/css-houdini-stripe/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/css-houdini-stripe",
+            "tsConfig": "packages/css-houdini-stripe/tsconfig.lib.json",
+            "packageJson": "packages/css-houdini-stripe/package.json",
+            "main": "packages/css-houdini-stripe/worklet.ts",
+            "assets": ["packages/css-houdini-stripe/*.md"],
+            "srcRootForCompilationRoot": "packages/css-houdini-stripe/src"
           }
         }
       }

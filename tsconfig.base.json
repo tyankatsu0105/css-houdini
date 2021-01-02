@@ -17,6 +17,9 @@
     "paths": {
       "@tyankatsu0105/css-houdini-ripple": [
         "packages/css-houdini-ripple/src/index.ts"
+      ],
+      "@tyankatsu0105/css-houdini-stripe": [
+        "packages/css-houdini-stripe/src/index.ts"
       ]
     },
     "resolveJsonModule": true,

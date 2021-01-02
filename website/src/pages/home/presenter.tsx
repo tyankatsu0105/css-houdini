@@ -7,10 +7,24 @@ import * as Templates from '~ui/templates';
 import * as Hooks from './hooks';
 
 const Component = () => {
+  const {
+    Component: RippleComponent,
+    name: RippleComponentName,
+  } = Hooks.useCSSHoudiniRipple();
+
+  const {
+    Component: StripeComponent,
+    name: StripeComponentName,
+  } = Hooks.useCSSHoudiniStripe();
+
   const workletItems: Components.WorkletCard.WorkletItem[] = [
     {
-      component: Hooks.useCSSHoudiniRipple().Component,
-      name: Hooks.useCSSHoudiniRipple().name,
+      component: RippleComponent,
+      name: RippleComponentName,
+    },
+    {
+      component: StripeComponent,
+      name: StripeComponentName,
     },
   ];
 

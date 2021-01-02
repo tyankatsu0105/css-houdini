@@ -25,6 +25,9 @@
   "projects": {
     "css-houdini-ripple": {
       "tags": []
+    },
+    "css-houdini-stripe": {
+      "tags": []
     }
   },
   "workspaceLayout": {
