@@ -16,18 +16,22 @@ type PaintSize = {
  * see: https://drafts.css-houdini.org/css-typed-om-1/#the-stylepropertymap
  */
 type StylePropertyMap = {
-  get(property: string): any
-  getAll(property: string): ReturnType<StylePropertyMap['get']>[]
-  has(property: string): boolean
-  size: number
+  get(property: string): any;
+  getAll(property: string): ReturnType<StylePropertyMap['get']>[];
+  has(property: string): boolean;
+  size: number;
 };
 
-type PaintCtorInputProperties = string[]
-type PaintCtorPaint = (ctx: PaintRenderingContext2D, geom: PaintSize, properties: StylePropertyMap) => void
+type PaintCtorInputProperties = string[];
+type PaintCtorPaint = (
+  ctx: PaintRenderingContext2D,
+  geom: PaintSize,
+  properties: StylePropertyMap
+) => void;
 
 interface PaintCtor {
-  inputProperties?: PaintCtorInputProperties,
-  paint?: PaintCtorPaint
+  inputProperties?: PaintCtorInputProperties;
+  paint?: PaintCtorPaint;
 }
 
 declare function registerPaint(name: string, paintCtor: PaintCtor): undefined;
