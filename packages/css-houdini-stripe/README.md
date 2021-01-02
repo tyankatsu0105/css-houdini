@@ -3,7 +3,7 @@
 ## Usage
 
 ```bash
-npm install @tyankatsu0105/css-houdini-glitch
+npm install @tyankatsu0105/css-houdini-stripe
 ```
 
 ```html

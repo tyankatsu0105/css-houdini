@@ -20,12 +20,12 @@
   }
 }
 
-@supports (background: paint(glitch)) {
+@supports (background: paint(stripe)) {
   .text:before {
     --houdini-stripe-line-number: 10;
     --houdini-stripe-line-color: #fff;
     --houdini-stripe-line-max-width: 3;
 
-    background-image: paint(glitch);
+    background-image: paint(stripe);
   }
 }

@@ -1,4 +1,4 @@
-import { useCSSHoudiniGlitch } from './use-css-houdini-glitch';
 import { useCSSHoudiniRipple } from './use-css-houdini-ripple';
+import { useCSSHoudiniStripe } from './use-css-houdini-stripe';
 
-export { useCSSHoudiniRipple, useCSSHoudiniGlitch };
+export { useCSSHoudiniRipple, useCSSHoudiniStripe };

@@ -13,9 +13,9 @@ const Component = () => {
   } = Hooks.useCSSHoudiniRipple();
 
   const {
-    Component: GlitchComponent,
-    name: GlitchComponentName,
-  } = Hooks.useCSSHoudiniGlitch();
+    Component: StripeComponent,
+    name: StripeComponentName,
+  } = Hooks.useCSSHoudiniStripe();
 
   const workletItems: Components.WorkletCard.WorkletItem[] = [
     {
@@ -23,8 +23,8 @@ const Component = () => {
       name: RippleComponentName,
     },
     {
-      component: GlitchComponent,
-      name: GlitchComponentName,
+      component: StripeComponent,
+      name: StripeComponentName,
     },
   ];
 

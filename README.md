@@ -33,7 +33,7 @@ npx nx g @nrwl/node:library <packageName> --publishable --importPath="@tyankatsu
 ```bash
 npx nx run <packageName>:build --watch
 
-# ex) npx nx run css-houdini-glitch:build --watch
+# ex) npx nx run css-houdini-stripe:build --watch
 ```
 
 ### Commit

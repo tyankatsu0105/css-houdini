@@ -34,22 +34,22 @@
         }
       }
     },
-    "css-houdini-glitch": {
-      "root": "packages/css-houdini-glitch",
-      "sourceRoot": "packages/css-houdini-glitch/src",
+    "css-houdini-stripe": {
+      "root": "packages/css-houdini-stripe",
+      "sourceRoot": "packages/css-houdini-stripe/src",
       "projectType": "library",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["packages/css-houdini-glitch/**/*.ts"]
+            "lintFilePatterns": ["packages/css-houdini-stripe/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/packages/css-houdini-glitch"],
+          "outputs": ["coverage/packages/css-houdini-stripe"],
           "options": {
-            "jestConfig": "packages/css-houdini-glitch/jest.config.js",
+            "jestConfig": "packages/css-houdini-stripe/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -57,12 +57,12 @@
           "executor": "@nrwl/node:package",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/packages/css-houdini-glitch",
-            "tsConfig": "packages/css-houdini-glitch/tsconfig.lib.json",
-            "packageJson": "packages/css-houdini-glitch/package.json",
-            "main": "packages/css-houdini-glitch/worklet.ts",
-            "assets": ["packages/css-houdini-glitch/*.md"],
-            "srcRootForCompilationRoot": "packages/css-houdini-glitch/src"
+            "outputPath": "dist/packages/css-houdini-stripe",
+            "tsConfig": "packages/css-houdini-stripe/tsconfig.lib.json",
+            "packageJson": "packages/css-houdini-stripe/package.json",
+            "main": "packages/css-houdini-stripe/worklet.ts",
+            "assets": ["packages/css-houdini-stripe/*.md"],
+            "srcRootForCompilationRoot": "packages/css-houdini-stripe/src"
           }
         }
       }

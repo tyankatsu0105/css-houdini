@@ -41,5 +41,5 @@ if (typeof registerPaint !== 'undefined') {
     }
   }
 
-  registerPaint('glitch', Ctor);
+  registerPaint('stripe', Ctor);
 }

@@ -1,13 +1,13 @@
-import worklet from 'raw-loader!../../../../../../dist/packages/css-houdini-glitch/worklet';
+import worklet from 'raw-loader!../../../../../../dist/packages/css-houdini-stripe/worklet';
 import * as React from 'react';
 
-import Img from '~static/media//glitch.jpg';
+import Img from '~static/media//stripe.jpg';
 
 import styles from './style.module.scss';
 
-const name = 'css-houdini-glitch' as const;
+const name = 'css-houdini-stripe' as const;
 
-export const useCSSHoudiniGlitch = () => {
+export const useCSSHoudiniStripe = () => {
   React.useEffect(() => {
     const workletBlob = URL.createObjectURL(
       new Blob([worklet], { type: 'application/javascript' })
@@ -18,7 +18,7 @@ export const useCSSHoudiniGlitch = () => {
 
   const Component = () => (
     <div className={`${styles['wrap']}`}>
-      <p className={`${styles['text']}`}>Glitch Text</p>
+      <p className={`${styles['text']}`}>Stripe Text</p>
     </div>
   );
 
