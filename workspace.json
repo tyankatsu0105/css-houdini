@@ -60,7 +60,7 @@
             "outputPath": "dist/packages/css-houdini-glitch",
             "tsConfig": "packages/css-houdini-glitch/tsconfig.lib.json",
             "packageJson": "packages/css-houdini-glitch/package.json",
-            "main": "packages/css-houdini-glitch/src/index.ts",
+            "main": "packages/css-houdini-glitch/worklet.ts",
             "assets": ["packages/css-houdini-glitch/*.md"],
             "srcRootForCompilationRoot": "packages/css-houdini-glitch/src"
           }

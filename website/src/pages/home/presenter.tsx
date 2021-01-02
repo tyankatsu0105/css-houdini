@@ -12,6 +12,10 @@ const Component = () => {
       component: Hooks.useCSSHoudiniRipple().Component,
       name: Hooks.useCSSHoudiniRipple().name,
     },
+    {
+      component: Hooks.useCSSHoudiniGlitch().Component,
+      name: Hooks.useCSSHoudiniGlitch().name,
+    },
   ];
 
   return (
