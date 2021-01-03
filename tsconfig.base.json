@@ -20,6 +20,9 @@
       ],
       "@tyankatsu0105/css-houdini-stripe": [
         "packages/css-houdini-stripe/src/index.ts"
+      ],
+      "@tyankatsu0105/css-houdini-tile-wall": [
+        "packages/css-houdini-tile-wall/src/index.ts"
       ]
     },
     "resolveJsonModule": true,
