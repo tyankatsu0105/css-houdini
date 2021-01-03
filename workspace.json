@@ -9,16 +9,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "packages/css-houdini-ripple/**/*.ts"
-            ]
+            "lintFilePatterns": ["packages/css-houdini-ripple/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/packages/css-houdini-ripple"
-          ],
+          "outputs": ["coverage/packages/css-houdini-ripple"],
           "options": {
             "jestConfig": "packages/css-houdini-ripple/jest.config.js",
             "passWithNoTests": true
@@ -26,18 +22,14 @@
         },
         "build": {
           "executor": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "srcRootForCompilationRoot": "packages/css-houdini-ripple/src",
             "outputPath": "dist/packages/css-houdini-ripple",
             "tsConfig": "packages/css-houdini-ripple/tsconfig.lib.json",
             "packageJson": "packages/css-houdini-ripple/package.json",
             "main": "packages/css-houdini-ripple/worklet.ts",
-            "assets": [
-              "packages/css-houdini-ripple/*.md"
-            ]
+            "assets": ["packages/css-houdini-ripple/*.md"]
           }
         }
       }
@@ -50,16 +42,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "packages/css-houdini-stripe/**/*.ts"
-            ]
+            "lintFilePatterns": ["packages/css-houdini-stripe/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/packages/css-houdini-stripe"
-          ],
+          "outputs": ["coverage/packages/css-houdini-stripe"],
           "options": {
             "jestConfig": "packages/css-houdini-stripe/jest.config.js",
             "passWithNoTests": true
@@ -67,17 +55,13 @@
         },
         "build": {
           "executor": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/packages/css-houdini-stripe",
             "tsConfig": "packages/css-houdini-stripe/tsconfig.lib.json",
             "packageJson": "packages/css-houdini-stripe/package.json",
             "main": "packages/css-houdini-stripe/worklet.ts",
-            "assets": [
-              "packages/css-houdini-stripe/*.md"
-            ],
+            "assets": ["packages/css-houdini-stripe/*.md"],
             "srcRootForCompilationRoot": "packages/css-houdini-stripe/src"
           }
         }
@@ -91,16 +75,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "packages/css-houdini-tile-wall/**/*.ts"
-            ]
+            "lintFilePatterns": ["packages/css-houdini-tile-wall/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/packages/css-houdini-tile-wall"
-          ],
+          "outputs": ["coverage/packages/css-houdini-tile-wall"],
           "options": {
             "jestConfig": "packages/css-houdini-tile-wall/jest.config.js",
             "passWithNoTests": true
@@ -108,17 +88,13 @@
         },
         "build": {
           "executor": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/packages/css-houdini-tile-wall",
             "tsConfig": "packages/css-houdini-tile-wall/tsconfig.lib.json",
             "packageJson": "packages/css-houdini-tile-wall/package.json",
             "main": "packages/css-houdini-tile-wall/worklet.ts",
-            "assets": [
-              "packages/css-houdini-tile-wall/*.md"
-            ],
+            "assets": ["packages/css-houdini-tile-wall/*.md"],
             "srcRootForCompilationRoot": "packages/css-houdini-tile-wall/src"
           }
         }
